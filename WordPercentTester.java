@@ -7,7 +7,6 @@ public class WordPercentTester
 {
 	public static void main(String[] args) 
 	{
-		//Declaration
 		Scanner userInput = new Scanner(System.in);
 		String stringToFind = null;
 		int postNumber;
