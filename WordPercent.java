@@ -67,8 +67,7 @@ public class WordPercent {
 			System.out.println("I don't think I was able to find your file");
 		}
 		
-		return numUpvotes;
-			
+		return numUpvotes;	
 	}
 	
 	public int [] getNumComments(String fileToRead, int commentsOfString)
@@ -90,18 +89,13 @@ public class WordPercent {
 				}
 			}
 			return numComments;
-			
 		}
 		catch (Exception ex)
 		{
 			System.out.println("I don't think I was able to find your file");
 		}
-		
-		return numComments;
-			
+		return numComments;	
 	}
-	
-	
 	
 	RedditPost [] getStringPosts(String fileToRead, String stringToFind)
 	{
@@ -118,7 +112,6 @@ public class WordPercent {
 			float postPercent = 0;
 			boolean stringExistence = false;
 			
-			
 			while ((line=myBufferReader.readLine())!=null)
 			{
 				if(line.contains(stringToFind))
@@ -132,8 +125,7 @@ public class WordPercent {
 				{
 				 newPosts[postCounter]=new RedditPost(line);
 				 postCounter+=1;
-				}
-				
+				}	
 			}
 			if(stringExistence == true)
 			{
@@ -144,62 +136,17 @@ public class WordPercent {
 			 System.out.println("None, that word does not exist in this text file.");
 			 System.exit(0);
 			}
-			
-			return newPosts;
-			
+			return newPosts;	
 		}
 		catch (Exception ex)
 		{
 			System.out.println("I don't think I was able to find your file");
 		}
-		return newPosts;
-			
+		return newPosts;	
 	}
 	
-	/*RedditPost [] getPercent(String fileToRead, String stringToFind)
-	{
-		RedditPost [] newPercentPosts=new RedditPost[6466];
-		
-		try
-		{
-			FileReader myFileReader=new FileReader(fileToRead);
-			BufferedReader myBufferReader= new BufferedReader(myFileReader);
-			String line=null;
-			int postCounter=1;
-			float postWithString = 0;
-			float postPercent = 0;
-			
-			while ((line=myBufferReader.readLine())!=null)
-			{
-				if(line.contains(stringToFind))
-				{
-				 newPercentPosts[postCounter]=new RedditPost(line);
-				 postCounter+=1;
-				 postWithString+=1;
-				}
-				else
-				{
-				 newPercentPosts[postCounter]=new RedditPost(line);
-				 postCounter+=1;
-				}
-			}
-			postPercent = (postWithString / postCounter)*100;
-			System.out.println("\nThis file contained \"" +stringToFind+ "\" " +postWithString+ " times.");
-			System.out.println("Posts containing this word make up " +postPercent+ "% of the text file.");
-		
-			return newPercentPosts;
-			
-		}
-		catch (Exception ex)
-		{
-			System.out.println("File not Found");
-		}
-		return newPercentPosts;
-			
-	}*/
 	RedditPost [] getPercentPost(String fileToRead, String stringToFind)
-	{
-		
+	{	
 		RedditPost [] newPosts=new RedditPost[6466];
 		try
 		{
@@ -232,7 +179,6 @@ public class WordPercent {
 			System.out.println("Post does not actually exist");
 			return newPosts;
 		}
-		
 	}
 	
 	RedditPost [] getSelectPost(String fileToRead, int commentsOfString)
@@ -265,6 +211,5 @@ public class WordPercent {
 			return newPosts;
 		}
 		return newPosts;
-		
 	}
 }
